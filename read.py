@@ -9,10 +9,10 @@ with open('reviews.txt', 'r') as f:
 		if count % 1000 == 0: #如果count是1000的倍數
 			# %是用來求餘數 
 		    print(len(deta))#每讀取一筆就印出
-print(len(deta))
+print('檔案讀取完了，總共有',len(deta),'筆資料')
 
+sum_lem = 0
+for d in deta: #把deta裡面的每一筆資料命名為d
+    sum_lem += len(d)
 
-print(deta[0])
-print('--------------------------')
-print(deta[1])
-
+print('留言的平均長度是',sum_lem/ len(deta))
